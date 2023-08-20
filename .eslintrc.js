@@ -13,7 +13,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+	plugins: ['react', '@typescript-eslint', 'react-hooks'],
 	rules: {
 		'react/jsx-filename-extension': [
 			2,
