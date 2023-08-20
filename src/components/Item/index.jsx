@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Popup } from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
+import { toastOptions } from '../../config/toast'
 import { removeItem } from '../../store/slice/todo'
 import Button from '../Button'
 import cls from './Item.module.scss'
@@ -17,14 +18,7 @@ const Item = ({ item, boardId }) => {
 		dispatch(removeItem({ boardId, itemId: item.id }))
 		setIsModalOpen(false)
 
-		toast.success('Item deleted successfully!', {
-			position: 'top-right',
-			autoClose: 3000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-		})
+		toast.success('Item deleted successfully!', toastOptions)
 	}
 
 	return (

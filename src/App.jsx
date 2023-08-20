@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
 import Board from './components/Board'
 import Loader from './components/Loader'
+import { toastOptions } from './config/toast'
 import { addItem, removeItem } from './store/slice/todo'
 import { fetchTodo } from './store/slice/todo/asyncActions'
 
@@ -40,23 +41,12 @@ const App = () => {
 			dispatch(removeItem({ boardId: sourceBoardId, itemId }))
 			dispatch(addItem({ boardId: destinationBoardId, item: itemToMove }))
 
-			toast.success('Drag-and-drop successful!', {
-				position: 'top-right',
-				autoClose: 3000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-			})
+			toast.success('Drag-and-drop successful!', toastOptions)
 		} else if (sourceBoardId > destinationBoardId) {
-			toast.error("Can't move from a larger column to a smaller column.", {
-				position: 'top-right',
-				autoClose: 3000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-			})
+			toast.error(
+				"Can't move from a larger column to a smaller column.",
+				toastOptions
+			)
 		}
 	}
 

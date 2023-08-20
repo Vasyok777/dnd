@@ -25,6 +25,12 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint",
+			"pre-push": "npm run test"
+		}
+	},
 	"eslintConfig": {
 		"extends": [
 			"react-app",
@@ -46,6 +52,7 @@
 	"devDependencies": {
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-i18next": "^6.0.3"
+		"husky": "^8.0.3",
+		"prettier": "^3.0.2"
 	}
 }

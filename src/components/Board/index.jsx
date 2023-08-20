@@ -3,6 +3,7 @@ import React from 'react'
 import { Draggable, Droppable } from 'react-beautiful-dnd'
 import { useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
+import { toastOptions } from '../../config/toast'
 import { removeAllItemsFromColumn } from '../../store/slice/todo'
 import Button from '../Button'
 import Item from '../Item'
@@ -14,14 +15,7 @@ const Board = ({ board }) => {
 	const deleteAllItems = () => {
 		dispatch(removeAllItemsFromColumn(board.id))
 
-		toast.success('All items deleted successfully!', {
-			position: 'top-right',
-			autoClose: 3000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-		})
+		toast.success('All items deleted successfully!', toastOptions)
 	}
 
 	return (
