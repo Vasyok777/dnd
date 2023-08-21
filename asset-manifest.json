@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Vasyok777/dnd/static/css/main.0ce1deb6.css",
+    "main.js": "/Vasyok777/dnd/static/js/main.fc2bb14c.js",
+    "index.html": "/Vasyok777/dnd/index.html",
+    "main.0ce1deb6.css.map": "/Vasyok777/dnd/static/css/main.0ce1deb6.css.map",
+    "main.fc2bb14c.js.map": "/Vasyok777/dnd/static/js/main.fc2bb14c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ce1deb6.css",
+    "static/js/main.fc2bb14c.js"
+  ]
+}
