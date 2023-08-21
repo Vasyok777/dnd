@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { forwardRef } from 'react'
 import cls from './Button.module.scss'
 
-const Button = ({ children, className, onClick }) => {
+const Button = forwardRef(({ children, className, onClick }, ref) => {
 	return (
 		<button
 			type='button'
 			onClick={onClick}
 			className={`${cls.button} ${className}`}
+			ref={ref}
 		>
 			{children}
 		</button>
 	)
-}
+})
 
 Button.propTypes = {
 	children: PropTypes.node.isRequired,
